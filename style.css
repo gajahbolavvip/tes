@@ -1,0 +1,141 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #07101f;
+  color: #eef4ff;
+  font-family: Arial, sans-serif;
+}
+
+.stock-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 10, 25, 0.91),
+      rgba(5, 13, 30, 0.78)
+    ),
+    url("/boruto-bg.png") center / cover fixed;
+}
+
+.topbar {
+  padding: 24px 5%;
+  border-bottom: 1px solid #26354c;
+  background: rgba(5, 10, 23, 0.7);
+}
+
+.topbar h2 {
+  margin: 0 0 8px;
+}
+
+.topbar p,
+.stock-heading p {
+  color: #a7c4e9;
+  margin: 6px 0;
+}
+
+.stock-grid {
+  max-width: 1250px;
+  margin: 28px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stock-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(105, 160, 220, 0.28);
+  border-radius: 14px;
+  background: rgba(13, 25, 44, 0.88);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 35px #0005;
+}
+
+.stock-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.stock-heading h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.daily-change {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.daily-change small {
+  width: 100%;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.positive {
+  color: #35e69a;
+}
+
+.negative {
+  color: #ff647c;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-top: 1px solid #293a50;
+  color: #a7c4e9;
+}
+
+.price-row strong {
+  color: #fff;
+}
+
+.chart-frame {
+  height: 360px;
+  overflow: hidden;
+  border: 1px solid #344258;
+  border-radius: 5px;
+}
+
+.chart-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #91a6c4;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .stock-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-frame {
+    height: 330px;
+  }
+
+  .stock-card {
+    padding: 12px;
+  }
+}
